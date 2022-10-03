@@ -10,11 +10,11 @@ public class TreinEndpoint {
 	TreinRepository tr;
 	
 	@GetMapping("eerste")
-	public String go(){
+	public Trein go(){
 		Trein trein = new Trein();
 		trein.setSnelheid(24);
 		trein.setNaam("Thomas");
 		tr.save(trein);
-		return "Het werkt!";
+		return trein;
 	}
 }
